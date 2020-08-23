@@ -182,6 +182,8 @@ if [ -n "${PLEX_MEDIA_PATH}" ]; then
   iocage fstab -a "${JAIL_NAME}" "${PLEX_MEDIA_PATH}" /media nullfs rw 0 0
 fi
 iocage exec "${JAIL_NAME}" cp /configs/pkg.conf /usr/local/etc
+iocage exec "${JAIL_NAME}" pkg update
+iocage exec "${JAIL_NAME}" pkg upgrade
 if ! iocage exec "${JAIL_NAME}" pkg install ${PLEXPKG}
 then
 	echo "Failed to install ${PLEXPKG} package"
