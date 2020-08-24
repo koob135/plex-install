@@ -1,6 +1,14 @@
 # freenas-iocage-plex
 Scripted installation of Plex Media Server in a FreeNAS jail
 
+## For Paul
+Run the following script to download this repo onto your server and install plex.
+
+```
+git clone https://github.com/koob135/plex-install.git /data
+/data/plex-install/plex-jail.sh
+```
+
 ## Description
 This is a simple script to automate installation of Plex Media Server in a FreeNAS jail, following current best practices.  It will create a jail, install Plex Media Server (with or without PlexPass), configure Plex to store its preferences and metadata outside the jail, and create a cron job to update the installed packages every week using the FreeBSD `latest` repository rather than `quarterly`.
 
