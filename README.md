@@ -5,7 +5,7 @@ Scripted installation of Plex Media Server in a FreeNAS jail
 Run the following script to download this repo onto your server and install plex.
 
 ```
-git clone https://github.com/koob135/plex-install.git /data
+git clone https://github.com/koob135/plex-install.git /data/plex-install
 /data/plex-install/plex-jail.sh
 ```
 
